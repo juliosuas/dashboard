@@ -3,7 +3,7 @@
 **Date:** 2026-04-19
 **Owner:** juliosuas
 **Status:** Draft — pending user review
-**Repo:** `juliosuas/dashboard` (public, to be created on first push)
+**Repo:** `juliosuas/gitshiproom` (public, to be created on first push)
 
 ---
 
@@ -295,14 +295,14 @@ README explains: create PAT with scopes `repo`, `read:org`, `read:user`; copy `.
 ## 14. Deployment & repo
 
 - Local-only. No hosting.
-- Repo created on GitHub as `juliosuas/dashboard` (public) using `gh repo create` during first push.
+- Repo created on GitHub as `juliosuas/gitshiproom` (public) using `gh repo create` during first push.
 - README: what it does, screenshots, setup, roadmap table (v0.1 → v0.6), tech stack.
 - LICENSE: MIT (consistent with user's other public repos — to confirm during implementation).
 
 ## 15. Project structure
 
 ```
-dashboard/
+gitshiproom/
 ├── app/
 │   ├── (routes)/
 │   │   ├── inbox/page.tsx
@@ -365,7 +365,7 @@ None blocking v0.1. Decisions to revisit when we reach each version:
 
 ## 18. What "done" looks like for v0.1
 
-- Repo `juliosuas/dashboard` exists, public, with a README that a stranger can follow to run it.
+- Repo `juliosuas/gitshiproom` exists, public, with a README that a stranger can follow to run it.
 - `bun install && bun dev` starts the app cleanly on a fresh machine (assuming Bun installed, `.env` configured).
 - PR inbox loads real PRs from my repos.
 - I can approve / request changes / merge via keyboard only.

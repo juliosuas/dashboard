@@ -1,8 +1,10 @@
 <div align="center">
 
-# 🎛️ Orchestrator
+# 🚢 GitShipRoom
 
-### **The command center for developers who refuse to waste time.**
+### **Your private ship-room. Every PR. Every repo. One keyboard.**
+
+*Stop drowning in tabs. Start shipping like it's your job — because it is.*
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![Bun](https://img.shields.io/badge/Bun-1.x-000000?style=for-the-badge&logo=bun&logoColor=fbf0df)](https://bun.sh/)
@@ -14,59 +16,82 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
 [![Made by juliosuas](https://img.shields.io/badge/Made%20by-juliosuas-blueviolet?style=flat-square)](https://github.com/juliosuas)
+[![Local-first](https://img.shields.io/badge/Local--first-✓-success?style=flat-square)]()
 
 **Every PR · Every issue · Every repo · One keyboard · Zero tabs.**
 
-[Features](#-features-v01) • [Quick Start](#-quick-start) • [Roadmap](#%EF%B8%8F-roadmap) • [Stack](#%EF%B8%8F-stack) • [Architecture](#%EF%B8%8F-architecture)
+[Why](#-why-you-need-this) • [Features](#-whats-inside-v01) • [Quick Start](#-quick-start) • [Roadmap](#%EF%B8%8F-the-roadmap) • [Stack](#%EF%B8%8F-built-with) • [Credits](#-credits--acknowledgments)
 
 </div>
 
 ---
 
-## ⚡ What is this?
+## 💥 Why you need this
 
-**Orchestrator** is your local-first **PR command center**. Triage pull requests across every GitHub repo you touch, respond to comments, merge, manage issues, and keep a personal pendientes list — all from one keyboard-first dashboard running on your machine.
+You're juggling **12 repos**. You switched tabs **47 times today**. Half the PRs you're supposed to review are buried in email. Your TODO list is spread across Notion, a sticky note, and `~/.notes-final-FINAL.md`.
 
-> **No SaaS. No subscription. No data leaves your computer.**
-> You are the orchestrator.
+You're not slow. **Your tooling is.**
 
-## 🚀 Why build this?
+**GitShipRoom** is a local-first command center that pulls every PR, every issue, every pending task into **one keyboard-driven dashboard** running on your machine. No SaaS. No subscription. No data ever leaves `localhost`.
 
-Modern developers juggle dozens of repos. Every day you lose hours to:
+> You are the orchestrator. GitShipRoom is your cockpit.
 
-- 🔍 Tab-hunting for PRs waiting on your review
-- 🧠 Context-switching between projects
-- ✉️ Inbox-zero rituals across GitHub notifications and Gmail
-- 📋 Rewriting the same TODO list in five places
-
-Orchestrator turns that into a **single, keyboard-driven view**. Your time is your power — stop giving it away.
-
-## ✨ Features (v0.1)
+## 🔥 What's inside (v0.1)
 
 | | Feature | Description |
 |---|---------|-------------|
-| 📥 | **PR Inbox** | Every PR across every repo that wants you — review-requested, assigned, or authored — in one list |
+| 📥 | **Unified PR Inbox** | Every PR that wants you, across every repo — review-requested, assigned, authored — in one list |
 | ⌨️ | **Keyboard-first** | `j/k` navigate · `Enter` open · `a` approve · `R` request changes · `m` merge · `c` copy Claude cmd · `?` cheatsheet |
-| 📝 | **Pendientes** | Local SQLite TODO list, optionally linked to a PR/issue, instant capture with `n` |
-| 🐛 | **Issues view** | Open issues across your repos, grouped, filterable |
+| 📝 | **Pendientes** | Local SQLite TODO list, optionally linked to any PR/issue. Capture instantly with `n` |
+| 🐛 | **Issues view** | Open issues across your repos, grouped and filterable |
 | 🤖 | **Claude Code handoff** | One keypress copies a context-aware command for [Claude Code](https://claude.com/claude-code) |
 | 🔄 | **Live polling** | Inbox auto-refreshes every 60s; manual refresh on demand |
-| 🔐 | **100% local** | Your token, your machine, your data. Nothing leaves localhost. |
+| 🔐 | **100% local** | Your token, your machine, your data. Nothing leaves your box. |
 
-## 🛣️ Roadmap
+## 🛣️ The roadmap
 
-Orchestrator ships in incremental releases. Each version is usable on its own.
+GitShipRoom ships in waves. Each version is usable on its own — you get value at every step.
 
-| Version | Scope | Status |
-|---------|-------|:------:|
-| **v0.1** | PR inbox · issues · pendientes · copy Claude command | 🚧 In progress |
-| **v0.2** | ✨ **AI-drafted PR reviews & comments** — you dictate intent, Claude redacts, you approve, ship | 📅 Next |
-| **v0.3** | 🎨 **Create/update PRs from the UI** — AI writes title + body | 📅 Planned |
-| **v0.4** | 📬 **Gmail inbox + AI replies** — same flow for email | 📅 Planned |
+| Version | What ships | Status |
+|---------|-----------|:------:|
+| **v0.1** | PR inbox · issues · pendientes · copy Claude command | 🚧 Building |
+| **v0.2** | ✨ **AI-drafted PR reviews** — dictate intent, Claude redacts, you approve, ship | 📅 Next |
+| **v0.3** | 🎨 **Create/update PRs from the UI** — AI writes title + body from your intent | 📅 Planned |
+| **v0.4** | 📬 **Gmail inbox + AI replies** — same orchestrator flow, for email | 📅 Planned |
 | **v0.5** | 🔔 **Proactive cron** — AI watches your repos and emails/calendars when something's urgent | 📅 Planned |
-| **v0.6** | 🧙 **Spawn Claude Code sessions** — launch tmux sessions with full context from the dashboard | 📅 Planned |
+| **v0.6** | 🧙 **Spawn Claude Code sessions from the UI** — tmux, full context, one click | 📅 Planned |
 
-## 🛠️ Stack
+## 🏃 Quick start
+
+```bash
+# Clone
+git clone https://github.com/juliosuas/gitshiproom.git
+cd gitshiproom
+
+# Install (you need Bun — https://bun.sh)
+bun install
+
+# Configure
+cp .env.example .env
+# → open .env and paste your GitHub PAT
+
+# Launch
+bun run dev
+```
+
+Open **http://localhost:3000** and let the cockpit take over.
+
+### 🔑 GitHub PAT scopes
+
+Create a classic token at **[github.com/settings/tokens/new](https://github.com/settings/tokens/new)** with:
+
+- ✅ `repo`
+- ✅ `read:org`
+- ✅ `read:user`
+
+Paste it into `.env` as `GITHUB_TOKEN=ghp_…`.
+
+## 🛠️ Built with
 
 <table>
 <tr>
@@ -140,36 +165,6 @@ Orchestrator ships in incremental releases. Each version is usable on its own.
 </tr>
 </table>
 
-## 🏃 Quick start
-
-```bash
-# Clone
-git clone https://github.com/juliosuas/dashboard.git
-cd dashboard
-
-# Install
-bun install
-
-# Configure
-cp .env.example .env
-# → open .env and paste your GitHub PAT
-
-# Run
-bun run dev
-```
-
-Open **http://localhost:3000** and let the cockpit take over.
-
-### 🔑 GitHub PAT scopes
-
-Create a classic token at **[github.com/settings/tokens/new](https://github.com/settings/tokens/new)** with:
-
-- ✅ `repo`
-- ✅ `read:org`
-- ✅ `read:user`
-
-Paste it into `.env` as `GITHUB_TOKEN=ghp_…`.
-
 ## 🧪 Development
 
 ```bash
@@ -207,15 +202,15 @@ All green before you ship. Non-negotiable.
      └───────────┘
 ```
 
-- 🧠 **Server-side cache** protects the 5 000 req/hr GitHub rate limit
-- 🔄 **Client-side SWR** polls every 60s and mutates optimistically
+- 🧠 **Server-side cache** protects GitHub's 5 000 req/hr rate limit
+- 🔄 **Client-side SWR** polls every 60s with optimistic mutations
 - 💾 **SQLite** stores only what doesn't live on GitHub (pendientes, settings)
 - 🚫 **No external services** — no Redis, no Postgres, no cloud workers
 
 ## 📂 Project structure
 
 ```
-dashboard/
+gitshiproom/
 ├── app/              # Next.js App Router pages + API routes
 │   ├── (pages)/      # inbox, issues, pendientes, settings, setup
 │   └── api/          # /api/prs, /api/issues, /api/pendientes, /api/settings
@@ -234,15 +229,46 @@ dashboard/
         └── plans/
 ```
 
+## 🙌 Credits & acknowledgments
+
+GitShipRoom stands on the shoulders of a lot of great open-source work. Shout-outs to:
+
+### Core stack
+- **[Next.js](https://nextjs.org/)** and **[SWR](https://swr.vercel.app/)** by [Vercel](https://vercel.com/)
+- **[Bun](https://bun.sh/)** by [Oven](https://oven.sh/)
+- **[Tailwind CSS](https://tailwindcss.com/)** by Tailwind Labs
+- **[shadcn/ui](https://ui.shadcn.com/)** by [@shadcn](https://github.com/shadcn)
+- **[Radix UI](https://www.radix-ui.com/)** — the primitives under shadcn
+- **[Lucide](https://lucide.dev/)** — the icon set
+- **[better-sqlite3](https://github.com/WiseLibs/better-sqlite3)** by WiseLibs
+- **[Octokit](https://github.com/octokit)** — GitHub's official SDK
+
+### Testing & tooling
+- **[Vitest](https://vitest.dev/)** & **[MSW](https://mswjs.io/)** for fast, realistic unit/integration tests
+- **[Playwright](https://playwright.dev/)** by Microsoft for E2E
+- **[TypeScript](https://www.typescriptlang.org/)** by Microsoft
+
+### Workflow & inspiration
+- **[Claude Code](https://claude.com/claude-code)** by [Anthropic](https://anthropic.com/) — used as a pair-programming tool during spec and plan authoring
+- **gstack** — dev-loop skills (`/ship`, `/review`, `/qa`, `/health`, `/investigate`)
+- **superpowers** plugin — brainstorming / planning / subagent-driven workflows
+- **[GitHub](https://github.com/)** — the platform we orchestrate
+- UX inspiration: **[Linear](https://linear.app/)**, **[Raycast](https://raycast.com/)**, **[Warp](https://warp.dev/)** — keyboard-first done right
+
+### The author
+GitShipRoom is designed, architected, and built by **[Julio · @juliosuas](https://github.com/juliosuas)**.
+
+If this saves you hours, a ⭐ on the repo is the best thank-you.
+
 ## 🤝 Contributing
 
-Orchestrator is MIT-licensed open source. Issues, PRs, and ideas welcome — especially once v0.1 ships.
+GitShipRoom is MIT-licensed open source. Issues, PRs, and ideas welcome — especially once v0.1 lands.
 
-If you want to build something in the same direction, fork freely.
+If you fork it and build something awesome, tag me.
 
 ## 📜 License
 
-**MIT** © [**juliosuas**](https://github.com/juliosuas)
+**MIT** © [**juliosuas**](https://github.com/juliosuas) · 2026
 
 ---
 
@@ -250,6 +276,6 @@ If you want to build something in the same direction, fork freely.
 
 **Built with 💻, shipped with ⚡ — for developers who value their time.**
 
-⭐ **Star this repo** if Orchestrator saves you a minute. It usually saves hours.
+⭐ **Star this repo** if GitShipRoom saves you a minute. It's designed to save hours.
 
 </div>
