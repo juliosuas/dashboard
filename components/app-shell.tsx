@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { TokenStatus } from "./token-status";
+import { ShortcutsCheatsheet } from "./shortcuts-cheatsheet";
 
 const links = [
   { href: "/inbox", label: "Inbox" },
@@ -34,6 +35,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       </aside>
       <main className="overflow-auto">
         <TokenStatus />
+        <ShortcutsCheatsheet />
         {children}
       </main>
     </div>
